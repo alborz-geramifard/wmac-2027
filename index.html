@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WMAC 2027 · Measuring Collective Intelligence in Agentic Systems</title>
+<meta name="description" content="WMAC 2027: an AAAI-27 workshop on measuring collective intelligence in multi-agent and sub-agent systems. Montréal, February 22–23, 2027.">
+<meta property="og:title" content="WMAC 2027 · Measuring Collective Intelligence in Agentic Systems">
+<meta property="og:description" content="An AAAI-27 workshop on how to tell whether a group of agents is actually working well together.">
+<meta property="og:image" content="img/logo.png">
+<link rel="icon" href="img/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body class="no-js">
+<a class="skip" href="#overview">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><img src="img/logo-256.png" alt="" width="34" height="34"><span>WMAC <b>2027</b></span></a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="links" aria-label="Main">
+      <a href="#overview">Overview</a>
+      <a href="#topics">Topics</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#dates">Dates</a>
+      <a href="#submit">Submit</a>
+      <a href="#organizers">Organizers</a>
+      <a href="#series">Past editions</a>
+      <button class="theme-btn" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"><canvas id="net"></canvas></div>
+  <div class="wrap hero-inner">
+    <img class="hero-logo" src="img/logo.png" alt="WMAC logo: a network of connected agents" width="190" height="186">
+    <div class="hero-text">
+      <p class="eyebrow">AAAI-27 Workshop · 3rd edition of WMAC</p>
+      <h1>Measuring Collective Intelligence <span class="grad">in Agentic Systems</span></h1>
+      <p class="lede">Does a team of agents actually beat its best member, or does it just add cost? We bring together machine learning, multi-agent systems, RL, economics, and cognitive science to find out how to tell.</p>
+      <ul class="facts">
+        <li><svg viewBox="0 0 24 24"><path d="M7 2v3M17 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/></svg>February 22–23, 2027 <small>(one-day workshop; exact day TBD)</small></li>
+        <li><svg viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Montréal, Canada · co-located with AAAI-27</li>
+      </ul>
+      <div class="cta">
+        <a class="btn primary" href="#submit">Submit a paper</a>
+        <a class="btn" href="#dates">Important dates</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap countdown-wrap">
+    <div class="countdown" id="countdown" aria-live="polite">
+      <div><span id="cd-label">Submissions due</span><b id="cd-date">November 20, 2026</b></div>
+      <div class="cd-units"><p><b id="cd-d">–</b>days</p><p><b id="cd-h">–</b>hours</p><p><b id="cd-m">–</b>min</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section id="overview" class="section">
+  <div class="wrap">
+    <p class="kicker">Overview</p>
+    <h2>The measurement gap</h2>
+    <div class="two-col">
+      <div class="prose">
+        <p>Modern agent deployments rarely consist of a single model. A coding assistant delegates to sub-agents for retrieval, editing, and verification; research prototypes organize dozens of agents into societies that negotiate and trade; and most real systems keep humans in the loop. How well these pieces work together decides how well the system works.</p>
+        <p>Our evaluation tools have not kept up. Standard benchmarks score one model on one task and say little about coordination overhead, specialization, communication efficiency, or whether adding another agent helps at all. Failure analyses of multi-agent systems point the same way: recurring problems in specification, coordination, and verification are not surfaced by task-level scores.</p>
+        <p>The first two WMAC editions asked <em>how to make LLM-based agents collaborate</em>. In their discussion sessions, one question kept coming back and stayed open: <strong>how do we know a group of agents is actually working well together?</strong> This edition takes that question as its topic.</p>
+      </div>
+      <aside class="questions">
+        <h3>Three questions we want to make progress on</h3>
+        <ol>
+          <li><span>1</span><p><b>What</b> is worth measuring in a multi-agent or sub-agent system, beyond end-task success?</p></li>
+          <li><span>2</span><p><b>How</b> can it be measured reproducibly and comparably across systems?</p></li>
+          <li><span>3</span><p><b>When</b> do collectives outperform individuals, and when do they merely add cost?</p></li>
+        </ol>
+      </aside>
+    </div>
+    <div class="disciplines">
+      <span>Machine learning</span><span>Multi-agent systems</span><span>Reinforcement learning</span><span>Economics</span><span>Cognitive science</span>
+    </div>
+    <div class="new-grid">
+      <div class="new-item"><span>New this year</span><h3>Measurement as the theme</h3><p>The first two editions asked how to make agents collaborate. This one asks how to tell whether they do.</p></div>
+      <div class="new-item"><span>New this year</span><h3>Breakout discussions</h3><p>Small groups around posted questions, added because past open-discussion sessions overflowed.</p></div>
+      <div class="new-item"><span>Returning</span><h3>Live industry demos &amp; panel</h3><p>Deployed multi-agent systems shown live, plus the panel that drew the liveliest exchanges in both prior editions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOPICS -->
+<section id="topics" class="section alt">
+  <div class="wrap">
+    <p class="kicker">Call for papers</p>
+    <h2>Topics of interest</h2>
+    <p class="sub">Submissions on the following topics are welcome, but not limited to them.</p>
+    <div class="cards">
+      <article class="card reveal"><div class="ico">📏</div><h3>Metrics &amp; evaluation methodologies</h3><p>New metrics for coordination quality, communication efficiency, specialization, and robustness in agent teams. Extending single-agent frameworks such as AgentBoard, and multi-agent arenas such as LLMArena, to measure collective behavior.</p></article>
+      <article class="card reveal"><div class="ico">🧪</div><h3>Benchmarks, environments &amp; simulations</h3><p>Controlled environments where collective behavior can be studied reproducibly, including negotiation and social settings, and benchmarks that score collaboration and competition directly.</p></article>
+      <article class="card reveal"><div class="ico">∑</div><h3>Foundations &amp; theories</h3><p>Formal definitions and scaling laws for collective intelligence, with connections to how it has been studied in biological and economic systems.</p></article>
+      <article class="card reveal"><div class="ico">🌳</div><h3>Hierarchical &amp; sub-agent architectures</h3><p>Measurement questions specific to planner–executor and manager–worker structures, where performance is attributable to no single component.</p></article>
+      <article class="card reveal"><div class="ico">🤝</div><h3>Human–agent collectives</h3><p>Evaluation of mixed human–AI teams and collective decision making.</p></article>
+      <article class="card reveal"><div class="ico">🚀</div><h3>Applications</h3><p>Case studies from software engineering, scientific discovery, robotics, healthcare, and economics where collective performance was measured, successfully or not.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKERS -->
+<section id="speakers" class="section">
+  <div class="wrap">
+    <p class="kicker">Invited speakers &amp; panelists</p>
+    <h2>Seven confirmed participants</h2>
+    <p class="sub">Four will give invited talks. The rest join the panel and help moderate the breakout discussions. Talk assignments will be announced later.</p>
+    <div class="people speakers">
+      <article class="person reveal">
+        <img src="img/speakers/michael_wooldridge.jpg" alt="Michael Wooldridge" loading="lazy">
+        <h3>Michael Wooldridge</h3><p class="aff">University of Oxford</p>
+        <p class="bio">Author of textbooks that shaped the multi-agent systems field. On what classical MAS research already knows about measuring collective behavior.</p>
+      </article>
+      <article class="person reveal">
+        <img src="img/speakers/chelsea_finn.jpg" alt="Chelsea Finn" loading="lazy">
+        <h3>Chelsea Finn</h3><p class="aff">Stanford University · Physical Intelligence</p>
+        <p class="bio">Collective behavior in embodied and robot learning systems.</p>
+      </article>
+      <article class="person reveal">
+        <img src="img/speakers/samy_bengio.jpg" alt="Samy Bengio" loading="lazy">
+        <h3>Samy Bengio</h3><p class="aff">Apple · EPFL</p>
+        <p class="bio">How capability scales as AI systems grow more composite.</p>
+      </article>
+      <article class="person reveal">
+        <div class="initials" role="img" aria-label="Mikaela Grace">MG</div>
+        <h3>Mikaela Grace</h3><p class="aff">Anthropic</p>
+        <p class="bio">How deployed agents coordinate in practice, and where coordination breaks.</p>
+      </article>
+      <article class="person reveal">
+        <div class="initials" role="img" aria-label="Jason Weston">JW</div>
+        <h3>Jason Weston</h3><p class="aff">Meta · NYU</p>
+        <p class="bio">Memory, tool use, and multi-step agent behavior.</p>
+      </article>
+      <article class="person reveal">
+        <img src="img/speakers/bo_an.jpg" alt="Bo An" loading="lazy">
+        <h3>Bo An</h3><p class="aff">Nanyang Technological University</p>
+        <p class="bio">Game-theoretic and reinforcement-learning approaches to multi-agent decision making.</p>
+      </article>
+      <article class="person reveal">
+        <img src="img/speakers/noah_goodman.jpg" alt="Noah Goodman" loading="lazy">
+        <h3>Noah Goodman</h3><p class="aff">Stanford University</p>
+        <p class="bio">The cognitive-science view of collective reasoning.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE -->
+<section id="schedule" class="section alt">
+  <div class="wrap">
+    <p class="kicker">Program</p>
+    <h2>Proposed schedule</h2>
+    <p class="sub">A full day built for interaction. The final agenda will be aligned with the AAAI-27 conference timetable.</p>
+    <div class="timeline">
+      <div class="slot"><time>08:30</time><div><b>Opening remarks</b><span>5 min</span></div></div>
+      <div class="slot talk"><time>08:35</time><div><b>Invited talk 1</b><span>45 min</span></div></div>
+      <div class="slot oral"><time>09:20</time><div><b>Oral presentation 1</b><span>20 min</span></div></div>
+      <div class="slot brk"><time>09:40</time><div><b>Coffee break</b><span>20 min</span></div></div>
+      <div class="slot talk"><time>10:00</time><div><b>Invited talk 2</b><span>45 min</span></div></div>
+      <div class="slot oral"><time>10:45</time><div><b>Lightning talks</b><span>15 min</span></div></div>
+      <div class="slot poster"><time>11:00</time><div><b>Poster session</b><span>60 min</span></div></div>
+      <div class="slot brk"><time>12:00</time><div><b>Lunch break</b><span>90 min</span></div></div>
+      <div class="slot hl"><time>13:30</time><div><b>Breakout discussions</b><span>45 min</span><p>Small groups around posted questions: what to measure, how to compare systems, how to evaluate human–agent teams. Each group reports back.</p></div></div>
+      <div class="slot hl"><time>14:15</time><div><b>Industry demo session</b><span>45 min</span><p>Live walkthroughs of deployed multi-agent systems, with questions mid-demo.</p></div></div>
+      <div class="slot brk"><time>15:00</time><div><b>Coffee break</b><span>20 min</span></div></div>
+      <div class="slot talk"><time>15:20</time><div><b>Invited talk 3</b><span>45 min</span></div></div>
+      <div class="slot oral"><time>16:05</time><div><b>Oral presentation 2</b><span>20 min</span></div></div>
+      <div class="slot talk"><time>16:25</time><div><b>Invited talk 4</b><span>45 min</span></div></div>
+      <div class="slot oral"><time>17:10</time><div><b>Oral presentation 3</b><span>20 min</span></div></div>
+      <div class="slot panel"><time>17:30</time><div><b>Panel discussion</b><span>30 min</span></div></div>
+      <div class="slot"><time>18:00</time><div><b>Awards &amp; closing</b><span>10 min</span></div></div>
+    </div>
+    <ul class="legend"><li class="talk">Invited talk</li><li class="oral">Contributed</li><li class="poster">Poster</li><li class="hl">Interactive</li><li class="panel">Panel</li></ul>
+  </div>
+</section>
+
+<!-- DATES -->
+<section id="dates" class="section">
+  <div class="wrap">
+    <p class="kicker">Timeline</p>
+    <h2>Important dates</h2>
+    <div class="reveal dates">
+      <div class="reveal date"><b>Oct 2, 2026</b><span>Call for participation</span></div>
+      <div class="reveal date key"><b>Nov 20, 2026</b><span>Paper submission deadline</span></div>
+      <div class="reveal date"><b>Dec 2, 2026</b><span>Notification of acceptance</span></div>
+      <div class="reveal date"><b>Feb 22–23, 2027</b><span>Workshop, Montréal</span></div>
+    </div>
+    <p class="note">Dates follow the schedule set by the AAAI-27 workshop chairs and may change.</p>
+  </div>
+</section>
+
+<!-- SUBMIT -->
+<section id="submit" class="section alt">
+  <div class="wrap">
+    <p class="kicker">Submission</p>
+    <h2>Submission guidelines</h2>
+    <div class="two-col">
+      <div class="tracks">
+        <div class="track"><h3>Full papers</h3><p class="big">up to 8 pages</p><p>Original research on measuring collective intelligence in agentic systems.</p></div>
+        <div class="track"><h3>Short, demo &amp; position papers</h3><p class="big">up to 4 pages</p><p>Early results, system demos, case studies, and position statements.</p></div>
+      </div>
+      <ul class="checks">
+        <li><b>Non-archival.</b> Presenting here does not prevent publishing elsewhere.</li>
+        <li><b>Double-blind review</b> on OpenReview, with three reviews per paper.</li>
+        <li><b>Best Student Paper Award</b> for master's and PhD students.</li>
+        <li>Expected: 40–50 submissions, roughly 15–20 accepted. Three oral talks, the rest posters, each with a short lightning pitch.</li>
+        <li><b>Industry demos</b> welcome. Presenters should prepare a recorded fallback.</li>
+      </ul>
+    </div>
+    <div class="cta center"><span class="btn disabled" aria-disabled="true">OpenReview submission site · coming soon</span></div>
+  </div>
+</section>
+
+<!-- ORGANIZERS -->
+<section id="organizers" class="section">
+  <div class="wrap">
+    <p class="kicker">Team</p>
+    <h2>Organizers</h2>
+    <p class="sub">Four of the five organizers ran previous WMAC editions. Shu chaired both, Geramifard and Marin co-organized both, and Zhang co-chaired 2026.</p>
+    <div class="people orgs">
+      <article class="person reveal">
+        <img src="img/organizers/raphael_shu.jpg" alt="Raphael Shu" loading="lazy">
+        <h3>Raphael Shu</h3><p class="aff">OpenAgents · Workshop chair</p>
+        <p class="bio">Principal Scientist working on AI agents. PhD, University of Tokyo (2020). Led Dialog2API and agentic capability development for the Titan LLM at AWS. ACL 2017 Outstanding Paper Award. Chaired WMAC 2025 and 2026.</p>
+        <a href="mailto:raphael@uaca.com">raphael@uaca.com</a>
+      </article>
+      <article class="person reveal">
+        <img src="img/organizers/alborz_geramifard.jpg" alt="Alborz Geramifard" loading="lazy">
+        <h3>Alborz Geramifard</h3><p class="aff">LinkedIn · Secondary contact</p>
+        <p class="bio">Distinguished Scientist working on agentic reinforcement learning. Previously led Conversational AI teams at Meta and Amazon. PhD, MIT. Has organized more than ten workshops and summits; Area Chair for ACL, EMNLP, NAACL, and RLC.</p>
+        <a href="mailto:alborzgeramifard@gmail.com">alborzgeramifard@gmail.com</a>
+      </article>
+      <article class="person reveal">
+        <img src="img/organizers/alex_marin.jpg" alt="Alex Marin" loading="lazy">
+        <h3>Alex Marin</h3><p class="aff">Thomson Reuters Labs</p>
+        <p class="bio">Lead Applied Scientist, previously Principal Applied Scientist at Microsoft. PhD, University of Washington, where he is Affiliate Professor in Linguistics. Workshop Chair for EMNLP and Program Chair for WeCNLP.</p>
+        <a href="mailto:amarin@uw.edu">amarin@uw.edu</a>
+      </article>
+      <article class="person reveal">
+        <img src="img/organizers/yusen_zhang.jpg" alt="Yusen Zhang" loading="lazy">
+        <h3>Yusen Zhang</h3><p class="aff">Columbia University</p>
+        <p class="bio">Postdoctoral Research Scientist working on LLM agents and multi-agent systems. Co-chaired WMAC 2026. SAC Award at NAACL 2025; Best Workshop Paper at AAAI 2025.</p>
+        <a href="mailto:yz5296@columbia.edu">yz5296@columbia.edu</a>
+      </article>
+      <article class="person reveal">
+        <img src="img/speakers/asli_celikyilmaz.jpg" alt="Asli Celikyilmaz" loading="lazy" class="top">
+        <h3>Asli Celikyilmaz</h3><p class="aff">Microsoft · University of Washington</p>
+        <p class="bio">Agentic AI Research Director and Affiliate Faculty. Research on multi-agent societies and optimization that balances individual agent objectives against collaborative outcomes. IEEE Fellow; Editor-in-Chief of <em>TACL</em>.</p>
+        <a href="mailto:asli.ca@live.com">asli.ca@live.com</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SERIES -->
+<section id="series" class="section alt">
+  <div class="wrap">
+    <p class="kicker">The series</p>
+    <h2>Third edition of WMAC</h2>
+    <p class="sub">Multi-Agent Collaboration workshops at AAAI have drawn a growing community. Visit <a href="https://multiagents.org">multiagents.org</a> for the full history.</p>
+    <div class="reveal editions">
+      <a class="reveal ed" href="https://multiagents.org/2025-agenda/"><span>AAAI-25 · Workshop</span><h3>WMAC 2025</h3><div class="nums"><p><b>33</b>submissions</p><p><b>178</b>registered</p></div></a>
+      <a class="reveal ed" href="https://multiagents.org/2026/"><span>AAAI-26 · Bridge Program · Singapore</span><h3>WMAC 2026</h3><div class="nums"><p><b>42</b>submissions</p><p><b>360</b>registered</p></div></a>
+      <div class="reveal ed now"><span>AAAI-27 · Workshop · Montréal</span><h3>WMAC 2027</h3><div class="nums"><p><b>40–50</b>expected submissions</p></div></div>
+    </div>
+    <h3 class="mini">Related events</h3>
+    <ul class="related">
+      <li>LaMAS: LLM-based Multi-Agent Systems <small>AAAI-26</small></li>
+      <li>MALGAI: Multi-Agent Learning in the Era of Generative AI <small>ICLR 2026</small></li>
+      <li>Agents in the Wild: Safety, Security, and Beyond <small>ICLR / ICML 2026</small></li>
+      <li>Scalable and Resilient Agentic Systems <small>ICML 2026</small></li>
+      <li>DISCOLI <small>DCOSS 2026</small></li>
+      <li>ACM Collective Intelligence <small>conference</small></li>
+    </ul>
+    <p class="note">Several of these include evaluation work; WMAC 2027 centers its full program on the validity, comparability, and diagnostic value of collective-intelligence measurements, sitting between the agentic-AI and the collective-intelligence communities.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="wrap contact">
+    <img src="img/logo-256.png" alt="" width="72" height="72">
+    <div>
+      <h2>Questions?</h2>
+      <p>Contact the workshop chair <a href="mailto:raphael@uaca.com">Raphael Shu</a> or <a href="mailto:alborzgeramifard@gmail.com">Alborz Geramifard</a>.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>© 2027 WMAC · Workshop on Multi-Agent Collaboration · <a href="https://multiagents.org">multiagents.org</a></p>
+    <p>Part of <a href="https://aaai.org/conference/aaai/">AAAI-27</a>. Photos © their owners.</p>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top">↑</button>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Event","name":"WMAC 2027: Measuring Collective Intelligence in Agentic Systems","startDate":"2027-02-22","endDate":"2027-02-23","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"AAAI-27","address":{"@type":"PostalAddress","addressLocality":"Montréal","addressCountry":"CA"}},"description":"An AAAI-27 workshop on measuring collective intelligence in multi-agent and sub-agent systems."}
+</script>
+<script src="script.js?v=2"></script>
+</body>
+</html>
